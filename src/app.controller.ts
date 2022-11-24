@@ -11,7 +11,7 @@ export class AppController {
   }
 
   @Get(':id')
-  getUser(@Param('id') id: string) {
+  getData(@Param('id') id: string) {
     return this.appService.getData(id);
   }
 
@@ -21,12 +21,12 @@ export class AppController {
   }
 
   @Put(':id')
-  updateUser(@Param('id') id: string, @Body('total') total: number) {
+  updateData(@Param('id') id: string, @Body('total') total: number) {
     return this.appService.updateData(id, total);
   }
 
   @Delete(':id')
-  deleteUser(@Param('id') id: string) {
+  deleteData(@Param('id') id: string) {
     return this.appService.deleteData(id);
   }
 
